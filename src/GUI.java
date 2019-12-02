@@ -204,7 +204,7 @@ public class GUI implements ActionListener, ChangeListener {
         this.helpPane.addTab("Projectile Types", null);
         this.helpPane.addTab("Control Panel", null);
         this.helpPane.addTab("Stats Panel", null);
-        this.helpPane.setSize(960,20);
+        this.helpPane.setSize(960,25);
         this.helpPane.setLocation(0,0);
         this.helpPanel.add(this.helpPane); // Add tab panes to HelpPanel
 
@@ -212,7 +212,7 @@ public class GUI implements ActionListener, ChangeListener {
         this.butHelpExit = new JButton("Return to Simulator");
         this.butHelpExit.addActionListener(this);
         this.helpPanel.add(this.butHelpExit); // Listen for ActionEvents (pressing button)
-        this.butHelpExit.setSize(140,30);
+        this.butHelpExit.setSize(180,30);
         this.butHelpExit.setLocation(410, 500);
 
     }
@@ -315,36 +315,46 @@ public class GUI implements ActionListener, ChangeListener {
         this.labelGridlines = new JLabel("Enable Gridlines");
         this.controlPanel.add(this.labelGridlines);
         this.controlPanel.add(this.boxGridlines);
-        this.boxGridlines.setSize(20,20);
-        this.boxGridlines.setLocation(280+5,140);
-        this.labelGridlines.setSize(90,15);
-        this.labelGridlines.setLocation(280+28, 143);
+        this.boxGridlines.setSize(25,25);
+        this.boxGridlines.setLocation(280,140-3);
+        this.labelGridlines.setSize(110,15);
+        this.labelGridlines.setLocation(280+23, 143);
 
         this.controlPanel.repaint();
     }
     public void createStatPanel() { // Method to create StatPanel & its JComponents
         this.statPanel = new JPanel(); // Create new JPanel for stats
         this.statPanel.setPreferredSize(new Dimension(400,180)); // 1/2 of mainPanel width, 1/3 of height
+		this.statPanel.setLayout(null); // Disable LayoutManager
 
         // Position Button
         this.butPosition = new JButton("Position");
         this.statPanel.add(this.butPosition);
         this.butPosition.addActionListener(this);
+        this.butPosition.setSize(110,30);
+        this.butPosition.setLocation(20,0);
 
         // Velocity Button
         this.butVelocity = new JButton("Velocity");
         this.statPanel.add(this.butVelocity);
         this.butVelocity.addActionListener(this);
+        this.butVelocity.setSize(110,30);
+        this.butVelocity.setLocation(135,0);
 
         // Acceleration Button
         this.butAcceleration = new JButton("Acceleration");
         this.statPanel.add(this.butAcceleration);
         this.butAcceleration.addActionListener(this);
+        this.butAcceleration.setSize(130,30);
+        this.butAcceleration.setLocation(250,0);
 
         // TextArea to Print Stats
         this.txtStats = new JTextArea(10,40);
         this.txtStats.setEditable(false); // Disable user typing
         this.statPanel.add(this.txtStats);
+        this.txtStats.setSize(370,140);
+        this.txtStats.setLocation(15,35);
+        
         intStatPanel = 0; // Default value, position stats
         loadStatPanel(); // Call method to determine which stats to show
     }
@@ -411,7 +421,7 @@ public class GUI implements ActionListener, ChangeListener {
 
         this.splitPaneH.setDividerSize(0); // Prevent resizing
         this.splitPaneV.setDividerSize(0); // Prevent resizing
-
+       
         // Top Menu Bar
         this.thebar = new JMenuBar(); // Create new menu bar
         this.mainPanel.add(this.thebar, BorderLayout.NORTH); // Add menubar to top of mainPanel

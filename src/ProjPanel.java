@@ -4,13 +4,17 @@ import java.awt.*;
 public class ProjPanel extends JPanel {
     // PROPERTIES
     // Projectile/Ball Coordinates
+    /** Controls where projectile's X value is drawn. Default = 85 */
     public int intBallX = 85;
+    /** Controls where projectile's Y value is drawn. Default = 340 */
     public int intBallY = 340;
 
+	/** Controls if full gridlines are drawn. Default = false */
     public boolean blnGrid = false; // default false
 
     // METHODS
-    public void paintComponent(Graphics g) { // Override JPanel paintComponent method
+    /** Overrides JPanel paintComponent method to paint projectile */
+    public void paintComponent(Graphics g) { 
         Graphics2D g2 = (Graphics2D)g; // Use Graphics2D instead of regular Graphics
         super.paintComponent(g2); // Clear previous drawings (Windows only); super JPanel (original) paintComponent method
 
@@ -49,6 +53,7 @@ public class ProjPanel extends JPanel {
 
     }
     // CONSTRUCTORS
+    /** Construct ProjPanel JPanel to draw projectiles */
     public ProjPanel () { // Construct ProjPanel
         super(); // Super JPanel
         setBackground(Color.WHITE); // Set ProjPanel background to white
