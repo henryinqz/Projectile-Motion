@@ -14,7 +14,7 @@ public class ControlPanel extends JPanel {
     public void paintComponent(Graphics g) { // Override JPanel paintComponent method
         super.paintComponent(g); // Clear previous drawings (Windows only); super JPanel (original) paintComponent method
         try {
-            imgProjType = ImageIO.read(new File("images/type" + intProjType + ".png")); // Load projectile type __ image
+            imgProjType = ImageIO.read(new File("Projectile-Motion/images/type" + intProjType + ".png")); // Load projectile type __ image
         } catch (IOException e) { // Catch IOExceptions for loading images
             e.printStackTrace(); // Print error location
         }
