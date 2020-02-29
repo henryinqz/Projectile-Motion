@@ -1,5 +1,6 @@
 # Projectile-Motion
-Basic projectile motion simulator based off Ontario grade 11/12 physics curriculum. (ICS4U1 Midterm Project)
+Basic projectile motion simulator based off Ontario grade 11/12 physics curriculum. (ICS4U1 Midterm Project
+
 https://github.com/henryinqz/Projectile-Motion/
 
 ## Instructions
