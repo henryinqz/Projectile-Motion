@@ -11,3 +11,8 @@ https://github.com/henryinqz/Projectile-Motion/
 
 ## Author
 - Henry Wong
+
+## Gallery
+![Control Panel](https://i.imgur.com/ijVT0nT.png)
+![Projectile Types](https://i.imgur.com/4FGcVq7.png)
+![Stats Panel](https://i.imgur.com/M2S2UXM.png)
